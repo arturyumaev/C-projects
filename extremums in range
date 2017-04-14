@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+#define MAX_RANGE_LENGTH 100
+
+int extremums_search(int range[], int range_length)
+{
+    int required_number;
+
+    // Searching for numbers, who are more then previous and next
+    for (int i = 1; i < range_length; i++)
+    {
+        if ((range[i] > range[i-1]) && (range[i] > range[i+1]))
+        {
+            required_number++;
+        }
+    }
+
+    return required_number;
+}
+
+int main(void)
+{
+    setbuf(stdout, NULL);
+
+    int input_stream;
+    int range_index = 0;
+    int range[MAX_RANGE_LENGTH] = {0};
+    int result;
+
+    // Hints for input
+    printf("WARNING: Max range length: %d\n", MAX_RANGE_LENGTH);
+    printf("\t Numbers are entered until your input is not a char.\n\n");
+
+    // Integer stream input
+    printf("Input number: ");
+    while (scanf("%d", &input_stream) == 1)
+    {
+        range[range_index] = input_stream;
+        range_index++;
+        printf("Input number: ");
+    }
+
+    result = extremums_search(range, MAX_RANGE_LENGTH);
+
+    printf("\nNumbers that are larger then previous and next: %d", result);
+
+    return 0;
+}
