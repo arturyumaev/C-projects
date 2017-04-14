@@ -1,0 +1,33 @@
+root@DESKTOP-K65MMM2 MINGW64 /c/Users/root/Desktop/Универ/c_lab_02_00/1
+$ gcov main.c
+File 'main.c'
+Lines executed:100.00% of 9
+Creating 'main.c.gcov'
+
+        -:    0:Source:main.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <math.h>
+        -:    3:
+        2:    4:int main(void)
+        -:    5:{
+        2:    6:    setbuf(stdout, NULL);
+        -:    7:
+        -:    8:    int a, n;
+        -:    9:    int result;
+        -:   10:
+        2:   11:    printf("Input a: ");
+        2:   12:    scanf("%d", &a);
+        -:   13:
+        2:   14:    printf("Input n: ");
+        2:   15:    scanf("%d", &n);
+        -:   16:
+        2:   17:    result = pow(a, n);
+        -:   18:
+        2:   19:    printf("a power n result: %d", result);
+        -:   20:
+        2:   21:    return 0;
+        -:   22:}

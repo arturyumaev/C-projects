@@ -1,0 +1,12 @@
+root@DESKTOP-K65MMM2 MINGW64 /c/Users/root/Desktop/Универ/c_lab_02_00/1
+$ ./main.exe
+Input a: 1
+Input n: 5
+a power n result: 1
+
+=======================================================================
+root@DESKTOP-K65MMM2 MINGW64 /c/Users/root/Desktop/Универ/c_lab_02_00/1
+$ ./main.exe
+Input a: 2
+Input n: 12
+a power n result: 4096

@@ -1,0 +1,146 @@
+$ gcov main.c
+File 'main.c'
+Lines executed:100.00% of 27
+Creating 'main.c.gcov'
+
+======================================================================
+Анализ покрытия кода с помощью утилиты gcov для x = 1, eps = 0.01
+
+        -:    0:Source:main.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <math.h>
+        -:    3:
+        -:    4:// Main function
+        2:    5:float f(float arg)
+        -:    6:{
+        2:    7:    return exp(arg);
+        -:    8:}
+        -:    9:
+        -:   10:// Factorial function
+       15:   11:int fact(int n)
+        -:   12:{
+       15:   13:    if (n == 0)
+        5:   14:        return 1;
+        -:   15:
+       10:   16:    return n * fact(n - 1);
+        -:   17:}
+        -:   18:
+        1:   19:int main(void)
+        -:   20:{
+        1:   21:    setbuf(stdout, NULL);
+        -:   22:
+        -:   23:    float x, eps;
+        -:   24:    float current_value, sum_of_row;
+        -:   25:    float absolute_error, relative_error;
+        -:   26:    int index;
+        -:   27:    float f_by_x;
+        -:   28:
+        1:   29:    index = 0;
+        1:   30:    current_value = 1;
+        1:   31:    sum_of_row = 0;
+        -:   32:
+        1:   33:    f_by_x = f(x);
+        -:   34:
+        -:   35:    // Input Data
+        1:   36:    printf("Input x: ");
+        1:   37:    scanf("%f", &x);
+        -:   38:
+        1:   39:    printf("Input Epsilon: ");
+        1:   40:    scanf("%f", &eps);
+        -:   41:
+        -:   42:    // Approximate value calculate
+        7:   43:    while (current_value >= eps)
+        -:   44:    {
+        5:   45:        current_value = pow(x, index) / fact(index);
+        5:   46:        sum_of_row += current_value;
+        -:   47:
+        5:   48:        index++;
+        -:   49:    }
+        -:   50:
+        -:   51:    // Errors calculate
+        1:   52:    absolute_error = fabs(f_by_x - sum_of_row);
+        1:   53:    relative_error = fabs(absolute_error / f_by_x);
+        -:   54:
+        1:   55:    printf("\ns(x): %0.6f\n", sum_of_row);
+        1:   56:    printf("f(x): %0.6f\n", f(x));
+        -:   57:
+        1:   58:    printf("Absolute error: %0.6f\n", absolute_error);
+        1:   59:    printf("Relative error: %0.6f\n", relative_error);
+        -:   60:
+        1:   61:    return 0;
+        -:   62:}
+======================================================================
+Анализ покрытия кода с помощью утилиты gcov для x = 1, eps = 0.000001
+
+        -:    0:Source:main.c
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <math.h>
+        -:    3:
+        -:    4:// Main function
+        2:    5:float f(float arg)
+        -:    6:{
+        2:    7:    return exp(arg);
+        -:    8:}
+        -:    9:
+        -:   10:// Factorial function
+       66:   11:int fact(int n)
+        -:   12:{
+       66:   13:    if (n == 0)
+       11:   14:        return 1;
+        -:   15:
+       55:   16:    return n * fact(n - 1);
+        -:   17:}
+        -:   18:
+        1:   19:int main(void)
+        -:   20:{
+        1:   21:    setbuf(stdout, NULL);
+        -:   22:
+        -:   23:    float x, eps;
+        -:   24:    float current_value, sum_of_row;
+        -:   25:    float absolute_error, relative_error;
+        -:   26:    int index;
+        -:   27:    float f_by_x;
+        -:   28:
+        1:   29:    index = 0;
+        1:   30:    current_value = 1;
+        1:   31:    sum_of_row = 0;
+        -:   32:
+        1:   33:    f_by_x = f(x);
+        -:   34:
+        -:   35:    // Input Data
+        1:   36:    printf("Input x: ");
+        1:   37:    scanf("%f", &x);
+        -:   38:
+        1:   39:    printf("Input Epsilon: ");
+        1:   40:    scanf("%f", &eps);
+        -:   41:
+        -:   42:    // Approximate value calculate
+       13:   43:    while (current_value >= eps)
+        -:   44:    {
+       11:   45:        current_value = pow(x, index) / fact(index);
+       11:   46:        sum_of_row += current_value;
+        -:   47:
+       11:   48:        index++;
+        -:   49:    }
+        -:   50:
+        -:   51:    // Errors calculate
+        1:   52:    absolute_error = fabs(f_by_x - sum_of_row);
+        1:   53:    relative_error = fabs(absolute_error / f_by_x);
+        -:   54:
+        1:   55:    printf("\ns(x): %0.6f\n", sum_of_row);
+        1:   56:    printf("f(x): %0.6f\n", f(x));
+        -:   57:
+        1:   58:    printf("Absolute error: %0.6f\n", absolute_error);
+        1:   59:    printf("Relative error: %0.6f\n", relative_error);
+        -:   60:
+        1:   61:    return 0;
+        -:   62:}
+

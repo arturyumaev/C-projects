@@ -1,0 +1,20 @@
+root@DESKTOP-K65MMM2 MINGW64 /c/Users/root/Desktop/Универ/c_lab_02_00/3
+$ ./main.exe
+Input x: 1
+Input Epsilon: 0.01
+
+s(x): 2.716667
+f(x): 2.718282
+Absolute error: 1.716667
+Relative error: 1.716667
+
+======================================================================
+root@DESKTOP-K65MMM2 MINGW64 /c/Users/root/Desktop/Универ/c_lab_02_00/3
+$ ./main.exe
+Input x: 0.1
+Input Epsilon: 0.00001
+
+s(x): 1.105171
+f(x): 1.105171
+Absolute error: 0.105171
+Relative error: 0.105171

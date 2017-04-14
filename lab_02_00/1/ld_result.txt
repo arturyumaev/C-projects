@@ -1,0 +1,10 @@
+$ ld -o main.exe main.o
+main.o:main.c:(.text+0x9): undefined reference to `__main'
+main.o:main.c:(.text+0x10): undefined reference to `__imp___iob_func'
+main.o:main.c:(.text+0x23): undefined reference to `setbuf'
+main.o:main.c:(.text+0x2f): undefined reference to `printf'
+main.o:main.c:(.text+0x42): undefined reference to `scanf'
+main.o:main.c:(.text+0x4e): undefined reference to `printf'
+main.o:main.c:(.text+0x61): undefined reference to `scanf'
+main.o:main.c:(.text+0x7c): undefined reference to `pow'
+main.o:main.c:(.text+0x94): undefined reference to `printf'

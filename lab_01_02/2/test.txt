@@ -1,0 +1,3 @@
+$ ./yhaw.exe
+Year has 56 weeks.
+

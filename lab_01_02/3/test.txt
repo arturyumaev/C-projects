@@ -1,0 +1,6 @@
+$ ./main.exe
+VVedite soprotivlenie R1: 1
+VVedite soprotivlenie R2: 1
+VVedite soprotivlenie R3: 1
+
+Summa soprotivlenii = 0.333333
