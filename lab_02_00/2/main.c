@@ -36,11 +36,11 @@ int main()
     float x1, y1, x2, y2, x3, y3;
     float a, b, c;
 	
-	x1 = x2 = x3 = y1 = y2 = y3 = 0;
+    x1 = x2 = x3 = y1 = y2 = y3 = 0;
 
     input_coordinates(x1, y1, 1);
-	input_coordinates(x2, y2, 2);
-	input_coordinates(x3, y3, 3);
+    input_coordinates(x2, y2, 2);
+    input_coordinates(x3, y3, 3);
 	
     a = sqrt(power(x2 - x1, 2) + power(y2 - y1, 2));
     b = sqrt(power(x3 - x1, 2) + power(y3 - y1, 2));
